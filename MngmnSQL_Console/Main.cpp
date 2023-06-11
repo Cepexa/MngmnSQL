@@ -1,4 +1,4 @@
-//#include "stdafx.h"
+Ôªø//#include "stdafx.h"
 #include <iostream>
 #include <windows.h>
 #include <sqlext.h>
@@ -23,7 +23,7 @@ int main()
 	SQLHANDLE SQLConnectionHandle = NULL;
 	SQLHANDLE SQLStatementHandle = NULL;
 	SQLRETURN retCode = 0;
-	char SQLQuery[] = "SELECT DocId, Code, Name FROM dbo.œÓˆÂÒÒ";
+	char SQLQuery[] = "SELECT DocId, Code, Name FROM dbo.–ü—Ä–æ—Ü–µ—Å—Å";
 
 	do {
 		if (SQL_SUCCESS != SQLAllocHandle(SQL_HANDLE_ENV, SQL_NULL_HANDLE, &SQLEnvHandle))
@@ -43,7 +43,7 @@ int main()
 			break;
 
 		SQLCHAR retConString[1024]; // Conection string
-		//"DRIVER={SQL Server}; SERVER=»Ãﬂ_—≈–¬≈–¿; DATABASE=»Ãﬂ_¡¿«€_ƒ¿ÕÕ€’; UID=»Ãﬂ_œŒÀ‹«Œ¬¿“≈Àﬂ; PWD=œ¿–ŒÀ‹;";
+		//"DRIVER={SQL Server}; SERVER=–ò–ú–Ø_–°–ï–†–í–ï–†–ê; DATABASE=–ò–ú–Ø_–ë–ê–ó–´_–î–ê–ù–ù–´–•; UID=–ò–ú–Ø_–ü–û–õ–¨–ó–û–í–ê–¢–ï–õ–Ø; PWD=–ü–ê–†–û–õ–¨;";
 		switch (SQLDriverConnect(SQLConnectionHandle, NULL, (SQLCHAR*)"DRIVER={SQL Server}; SERVER=CHICHIL-SV; DATABASE=test; UID=test; PWD=Qwerty123$%^; ", SQL_NTS, retConString, 1024, NULL, SQL_DRIVER_NOPROMPT)) {
 			// Establishes connections to a driver and a data source
 		case SQL_SUCCESS:
